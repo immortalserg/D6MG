@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/user/GIT/D6MG/kicad/ass_shield.sch)
-    (date "Пт 11 янв 2019 17:46:59")
+    (date "Пт 11 янв 2019 19:14:54")
     (tool "Eeschema 6.0.0-rc1-unknown-b491065~66~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -84,7 +84,7 @@
       (tstamp 5B6F1E2F))
     (comp (ref L6)
       (value "820 nH")
-      (footprint Inductor_SMD:L_0402_1005Metric)
+      (footprint Inductor_SMD:L_0805_2012Metric)
       (libsource (lib ass_shield-rescue) (part L-imm_lib) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5B6F24C2))
@@ -141,7 +141,7 @@
       (tstamp 5B6E464C))
     (comp (ref L5)
       (value "470 nH")
-      (footprint Inductor_SMD:L_0402_1005Metric)
+      (footprint Inductor_SMD:L_0603_1608Metric)
       (libsource (lib ass_shield-rescue) (part L-imm_lib) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5B6E4652))
