@@ -138,20 +138,17 @@ F 3 "" H 850 7500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	950  7300 850  7300
-Wire Wire Line
-	850  7650 1250 7650
 $Comp
 L power:GND #PWR07
 U 1 1 5B6F2C84
-P 1250 7650
-F 0 "#PWR07" H 1250 7400 50  0001 C CNN
-F 1 "GND" H 1255 7477 50  0001 C CNN
-F 2 "" H 1250 7650 50  0001 C CNN
-F 3 "" H 1250 7650 50  0001 C CNN
-	1    1250 7650
+P 850 7650
+F 0 "#PWR07" H 850 7400 50  0001 C CNN
+F 1 "GND" H 855 7477 50  0001 C CNN
+F 2 "" H 850 7650 50  0001 C CNN
+F 3 "" H 850 7650 50  0001 C CNN
+	1    850  7650
 	1    0    0    -1  
 $EndComp
-Connection ~ 1250 7650
 Wire Wire Line
 	850  7300 850  7350
 $Comp
@@ -292,20 +289,17 @@ F 3 "" H 850 6050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	950  5850 850  5850
-Wire Wire Line
-	850  6200 1250 6200
 $Comp
 L power:GND #PWR06
 U 1 1 5B6E4663
-P 1250 6200
-F 0 "#PWR06" H 1250 5950 50  0001 C CNN
-F 1 "GND" H 1255 6027 50  0001 C CNN
-F 2 "" H 1250 6200 50  0001 C CNN
-F 3 "" H 1250 6200 50  0001 C CNN
-	1    1250 6200
+P 850 6200
+F 0 "#PWR06" H 850 5950 50  0001 C CNN
+F 1 "GND" H 855 6027 50  0001 C CNN
+F 2 "" H 850 6200 50  0001 C CNN
+F 3 "" H 850 6200 50  0001 C CNN
+	1    850  6200
 	1    0    0    -1  
 $EndComp
-Connection ~ 1250 6200
 Wire Wire Line
 	850  5850 850  5900
 $Comp
@@ -507,7 +501,7 @@ F 3 "" H 1950 5050 50  0001 C CNN
 	1    1950 5050
 	0    1    1    0   
 $EndComp
-Text GLabel 1950 5250 0    50   Input ~ 0
+Text GLabel 1800 5250 0    50   Input ~ 0
 5V
 $Comp
 L ass_shield-rescue:syn470r-imm_lib D14
@@ -697,11 +691,11 @@ F 3 "~" H 600 4950 50  0001 C CNN
 $EndComp
 Connection ~ 600  5150
 Text GLabel 1850 6050 0    50   Input ~ 0
-5V
+3,3V
 Wire Wire Line
 	1650 5950 1650 6100
 Text GLabel 1850 7500 0    50   Input ~ 0
-5V
+3,3V
 Wire Wire Line
 	1650 7400 1650 7600
 Text GLabel 2800 1550 2    50   Input ~ 0
@@ -1825,7 +1819,7 @@ U 1 1 5BB3F83F
 P 4300 2050
 F 0 "J9" V 4887 2044 60  0000 C CNN
 F 1 "RJ45" V 4781 2044 60  0000 C CNN
-F 2 "w_conn_pc:rj45-shield" H 4728 1938 60  0001 L CNN
+F 2 "imm:rj45-shield" H 4728 1938 60  0001 L CNN
 F 3 "" H 4300 2050 60  0000 C CNN
 	1    4300 2050
 	0    -1   -1   0   
@@ -1974,7 +1968,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 2950 8950 3250
 Wire Wire Line
-	8950 3250 8700 3250
+	8950 3250 8850 3250
 Wire Wire Line
 	7150 3250 7150 3050
 Wire Wire Line
@@ -3065,4 +3059,124 @@ Wire Wire Line
 Connection ~ 3700 3450
 Text GLabel 4150 3400 0    50   Input ~ 0
 5V
+Wire Wire Line
+	1850 6050 1850 6300
+Wire Wire Line
+	1850 6300 1250 6300
+Wire Wire Line
+	1250 6300 1250 6200
+Wire Wire Line
+	1850 7500 1850 7750
+Wire Wire Line
+	1850 7750 1250 7750
+Wire Wire Line
+	1250 7750 1250 7650
+$Comp
+L Device:CP C?
+U 1 1 5C49501B
+P 2000 6300
+F 0 "C?" V 2255 6300 50  0000 C CNN
+F 1 "10 uF 6.3V" V 2164 6300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2038 6150 50  0001 C CNN
+F 3 "~" H 2000 6300 50  0001 C CNN
+	1    2000 6300
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1850 6300
+Wire Wire Line
+	2150 6300 3250 6300
+Wire Wire Line
+	3250 6300 3250 6400
+Wire Wire Line
+	3250 6400 3800 6400
+Wire Wire Line
+	3800 6400 3800 6250
+Wire Wire Line
+	3800 6250 3650 6250
+$Comp
+L Device:CP C?
+U 1 1 5C4B8DFC
+P 5000 5750
+F 0 "C?" V 5255 5750 50  0000 C CNN
+F 1 "10 uF 6.3V" V 5164 5750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5038 5600 50  0001 C CNN
+F 3 "~" H 5000 5750 50  0001 C CNN
+	1    5000 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4800 5900 4800 5750
+Wire Wire Line
+	4800 5750 4850 5750
+Connection ~ 4800 5900
+Wire Wire Line
+	5150 5750 5650 5750
+Wire Wire Line
+	5650 5750 5650 6050
+$Comp
+L Device:CP C?
+U 1 1 5C4FF872
+P 6000 700
+F 0 "C?" V 5745 700 50  0000 C CNN
+F 1 "10 uF 6.3V" V 5836 700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6038 550 50  0001 C CNN
+F 3 "~" H 6000 700 50  0001 C CNN
+	1    6000 700 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 700  6600 700 
+Wire Wire Line
+	6600 700  6600 850 
+Connection ~ 6600 850 
+Wire Wire Line
+	5850 700  5200 700 
+Wire Wire Line
+	5200 700  5200 2150
+Wire Wire Line
+	5200 2150 5300 2150
+Connection ~ 5300 2150
+$Comp
+L Device:CP C?
+U 1 1 5C549D38
+P 7600 2650
+F 0 "C?" V 7855 2650 50  0000 C CNN
+F 1 "10 uF 6.3V" V 7764 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 7638 2500 50  0001 C CNN
+F 3 "~" H 7600 2650 50  0001 C CNN
+	1    7600 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 2650 8850 2650
+Wire Wire Line
+	8850 2650 8850 3250
+Connection ~ 8850 3250
+Wire Wire Line
+	8850 3250 8700 3250
+$Comp
+L Device:CP C?
+U 1 1 5C570B15
+P 2600 5650
+F 0 "C?" V 2855 5650 50  0000 C CNN
+F 1 "10 uF 6.3V" V 2764 5650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2638 5500 50  0001 C CNN
+F 3 "~" H 2600 5650 50  0001 C CNN
+	1    2600 5650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 5650 3100 5650
+Wire Wire Line
+	3100 5650 3100 5450
+Connection ~ 3100 5450
+Wire Wire Line
+	1800 5250 1900 5250
+Wire Wire Line
+	1900 5250 1900 5650
+Wire Wire Line
+	1900 5650 2450 5650
+Connection ~ 1900 5250
+Wire Wire Line
+	1900 5250 1950 5250
 $EndSCHEMATC
